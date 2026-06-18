@@ -42,6 +42,13 @@ export default function StrictMode() {
               </li>
             ))}
           </ul>
+          <p className="mt-6 rounded-2xl border border-line border-l-4 border-l-blue bg-white px-[22px] py-4 text-[15px] text-muted">
+            <b className="text-ink">Граница гарантий — честно.</b> Strict mode
+            закрывает штатный обход, случайную утечку и отключение «в один
+            клик». Мы не обещаем магии против пользователя с полным root и
+            неограниченным временем — поэтому публикуем модель угроз и приглашаем
+            вашу red team проверить агент в пилоте.
+          </p>
           <div className="mt-7">
             <BtnPrimary href="#pilot">Проверить в своём контуре</BtnPrimary>
           </div>

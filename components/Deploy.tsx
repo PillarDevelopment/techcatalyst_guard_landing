@@ -10,7 +10,7 @@ const blocks = [
   {
     title: "Раскатка агентов",
     tag: null,
-    text: "Пакеты для macOS и Linux (Windows — в roadmap), развёртывание через MDM / software center, автонастройка shell-интеграций и автозапуска после установки.",
+    text: "Пакеты для macOS и Linux; Windows / PowerShell — целевой срок Q4 2026. Развёртывание через MDM / software center, автонастройка shell-интеграций и автозапуска после установки.",
   },
   {
     title: "Масштаб",

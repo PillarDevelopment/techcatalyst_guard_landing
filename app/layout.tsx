@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords:
     "DLP для разработчиков, защита секретов от AI, on-prem DLP терминал, контроль MCP, маскирование секретов, PII, защита рабочих станций",
   openGraph: {
-    title: "Techcatalyst Guard — секреты не покидают рабочую станцию",
+    title: "Techcatalyst Guard — учётные данные не покидают рабочую станцию",
     description:
       "Перехват команд терминала, маскирование секретов и PII в реальном времени, strict mode и on-prem панель управления.",
     type: "website",

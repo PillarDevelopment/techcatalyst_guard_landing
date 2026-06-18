@@ -6,6 +6,7 @@ import Features from "@/components/Features";
 import StrictMode from "@/components/StrictMode";
 import Deploy from "@/components/Deploy";
 import Roles from "@/components/Roles";
+import Assurance from "@/components/Assurance";
 import Pilot from "@/components/Pilot";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
         <StrictMode />
         <Deploy />
         <Roles />
+        <Assurance />
         <Pilot />
         <Faq />
       </main>

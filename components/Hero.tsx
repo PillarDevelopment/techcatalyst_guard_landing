@@ -16,12 +16,12 @@ export default function Hero() {
         <div>
           <Kicker>On-prem workstation security</Kicker>
           <h1 className="mb-5 text-[clamp(32px,4.3vw,52px)] font-bold leading-[1.18] tracking-[-.015em] text-[#222]">
-            Секреты остаются на рабочей станции.{" "}
+            Учётные данные остаются на рабочей станции.{" "}
             <em className="not-italic text-blue">Даже когда с ней работает AI.</em>
           </h1>
           <Lead>
             Techcatalyst Guard перехватывает команды терминала, ответы
-            MCP-инструментов и буфер обмена — и маскирует секреты и PII до того,
+            MCP-инструментов и буфер обмена — и маскирует учётные данные и PII до того,
             как их увидит AI-агент. Политики централизованы и защищены от
             отключения. Всё работает on-prem.
           </Lead>
