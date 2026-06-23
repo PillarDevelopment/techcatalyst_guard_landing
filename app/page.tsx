@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import HowItWorks from "@/components/HowItWorks";
+import LLMFirewall from "@/components/LLMFirewall";
 import Features from "@/components/Features";
 import StrictMode from "@/components/StrictMode";
 import Deploy from "@/components/Deploy";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <HowItWorks />
+        <LLMFirewall />
         <Features />
         <StrictMode />
         <Deploy />
