@@ -7,6 +7,7 @@ import Features from "@/components/Features";
 import StrictMode from "@/components/StrictMode";
 import Deploy from "@/components/Deploy";
 import Roles from "@/components/Roles";
+import Clients from "@/components/Clients";
 import Team from "@/components/Team";
 import Assurance from "@/components/Assurance";
 import Pilot from "@/components/Pilot";
@@ -26,6 +27,7 @@ export default function Home() {
         <StrictMode />
         <Deploy />
         <Roles />
+        <Clients />
         <Team />
         <Assurance />
         <Pilot />
