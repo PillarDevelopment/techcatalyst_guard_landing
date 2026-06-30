@@ -43,22 +43,22 @@ const faqs: { q: string; a: React.ReactNode }[] = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="faq" className="midnight-band py-[92px] max-sm:py-16">
       <Wrap>
         <Reveal className="text-center">
-          <Kicker>FAQ</Kicker>
-          <H2>Частые вопросы</H2>
+          <Kicker className="text-arc">FAQ</Kicker>
+          <H2 className="text-white">Частые вопросы</H2>
         </Reveal>
         <Reveal className="mx-auto mt-11 max-w-[800px]">
           {faqs.map((f) => (
             <details
               key={f.q}
-              className="mb-3 rounded-2xl border border-line bg-white px-[26px] transition-shadow open:shadow-card"
+              className="summary-dark mb-3 rounded-card border border-white/12 bg-white/5 px-[26px]"
             >
-              <summary className="flex cursor-pointer list-none justify-between gap-[18px] py-5 text-[17px] font-semibold text-[#222]">
+              <summary className="flex cursor-pointer list-none justify-between gap-[18px] py-5 text-[17px] font-medium text-white">
                 {f.q}
               </summary>
-              <p className="max-w-[690px] pb-[22px] text-[15.5px] text-muted">{f.a}</p>
+              <p className="max-w-[690px] pb-[22px] text-[15.5px] leading-[1.6] text-halo">{f.a}</p>
             </details>
           ))}
         </Reveal>

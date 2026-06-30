@@ -1,46 +1,51 @@
-import { Wrap, Kicker, Lead, BtnPrimary, BtnGhost } from "./ui";
-import TerminalDemo from "./TerminalDemo";
+import SignalOrb from "./SignalOrb";
+import { BtnGhost, BtnPrimary, Kicker, Lead, Wrap } from "./ui";
 
-const chips = ["On-prem", "Strict mode", "Zero cloud dependency"];
+const chips = [
+  "On-prem enforcement",
+  "MCP + terminal + clipboard",
+  "Политики без phone-home",
+];
 
 export default function Hero() {
   return (
-    <section
-      className="overflow-hidden py-24 pb-[84px] max-md:py-12 max-md:pb-11"
-      style={{
-        background:
-          "radial-gradient(900px 460px at 82% -12%, rgba(24,55,218,.07), transparent 60%), #fff",
-      }}
-    >
-      <Wrap className="grid grid-cols-[1.05fr_1fr] items-center gap-14 max-md:grid-cols-1">
-        <div>
-          <Kicker>On-prem workstation security</Kicker>
-          <h1 className="mb-5 text-[clamp(32px,4.3vw,52px)] font-bold leading-[1.18] tracking-[-.015em] text-[#222]">
-            Учётные данные остаются на рабочей станции.{" "}
-            <em className="not-italic text-blue">Даже когда с ней работает AI.</em>
+    <section className="midnight-band overflow-hidden pt-24 pb-[88px] max-md:pt-14 max-md:pb-14">
+      <Wrap className="grid grid-cols-[0.86fr_1.14fr] items-center gap-10 max-md:grid-cols-1">
+        <div className="relative z-10 max-w-[520px]">
+          <Kicker className="text-arc">Developer workstation defense</Kicker>
+          <h1 className="max-w-[11ch] text-[clamp(40px,6vw,59px)] font-light leading-[1.08] tracking-[-0.019em] text-white">
+            Управляйте тем, что AI-агент видит на рабочей станции.
           </h1>
-          <Lead>
-            Techcatalyst Guard перехватывает команды терминала, ответы
-            MCP-инструментов и буфер обмена — и маскирует учётные данные и PII до того,
-            как их увидит AI-агент. Политики централизованы и защищены от
-            отключения. Всё работает on-prem.
+          <Lead className="mt-5 text-[18px] text-halo">
+            Techcatalyst Guard перехватывает terminal, MCP и clipboard на машине
+            разработчика. Секреты и PII маскируются до того, как попадут во
+            внешнюю модель, а события остаются под on-prem контролем.
           </Lead>
-          <div className="mb-7 mt-8 flex flex-wrap gap-3.5">
+          <div className="mt-8 flex flex-wrap gap-3">
             <BtnPrimary href="#pilot">Запросить пилот</BtnPrimary>
-            <BtnGhost href="#pilot">Получить архитектуру решения</BtnGhost>
+            <BtnGhost
+              href="#how"
+              className="border-white/20 bg-transparent text-white hover:border-arc hover:text-arc"
+            >
+              Смотреть схему
+            </BtnGhost>
           </div>
-          <div className="flex flex-wrap gap-2.5">
-            {chips.map((c) => (
+          <div className="mt-7 flex flex-wrap gap-2.5">
+            {chips.map((chip) => (
               <span
-                key={c}
-                className="rounded-full border border-line bg-soft px-3.5 py-1.5 text-[13.5px] font-medium text-muted before:mr-[7px] before:align-[1px] before:text-[9px] before:text-green before:content-['●']"
+                key={chip}
+                className="rounded-[4px] border border-white/16 bg-white/5 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-halo"
               >
-                {c}
+                {chip}
               </span>
             ))}
           </div>
         </div>
-        <TerminalDemo />
+
+        <div className="relative min-h-[560px] max-md:min-h-[420px]">
+          <div className="control-grid absolute inset-0 opacity-30" />
+          <SignalOrb />
+        </div>
       </Wrap>
     </section>
   );

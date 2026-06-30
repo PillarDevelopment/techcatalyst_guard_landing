@@ -1,67 +1,74 @@
-import { Wrap, Kicker, H2, Lead, Card, Code } from "./ui";
 import Reveal from "./Reveal";
+import { Card, Code, H2, Kicker, Lead, Wrap } from "./ui";
 
 const pains = [
   {
-    ico: "ai",
+    ico: "agent",
     title: "AI-агенты в терминале",
     text: (
       <>
-        Coding-агенты выполняют команды и читают вывод автоматически. Один{" "}
-        <Code>cat .env</Code> — и креды уже в контексте внешней модели.
+        Coding-агент исполняет команды быстрее человека. Один <Code>cat .env</Code>{" "}
+        превращает локальный секрет в контекст внешней модели.
       </>
     ),
   },
   {
-    ico: ">_",
-    title: "Секреты в выводе команд",
-    text: "Логи с PII, конфиги, состояние инфраструктуры, облачные креды — всё это штатно печатается в stdout и уходит дальше по конвейеру.",
+    ico: "stdout",
+    title: "Секреты в выводе",
+    text: "Конфиги, PII, cloud credentials и внутренние артефакты штатно пролетают через stdout и попадают в tool-response.",
   },
   {
-    ico: "⧉",
-    title: "Буфер обмена",
-    text: "Скопированный токен оказывается в чате с ассистентом или внешнем веб-инструменте за секунды — незаметно для любых сетевых шлюзов.",
+    ico: "mcp",
+    title: "MCP как новый канал",
+    text: "MCP даёт агенту доступ к файлам и ресурсам напрямую. Если локальный слой не контролирует ответы, утечка уже случилась.",
   },
   {
-    ico: "⇄",
-    title: "MCP-инструменты",
-    text: "MCP-серверы дают агентам прямой доступ к файлам и ресурсам. Без локального контроля каждый инструмент — потенциальный канал утечки.",
+    ico: "copy",
+    title: "Clipboard как side channel",
+    text: "Токен, скопированный в буфер обмена, может оказаться в чате или веб-инструменте за секунды, минуя классический perimeter DLP.",
   },
 ];
 
 export default function Problem() {
   return (
-    <section id="problem" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="problem" className="bg-paper py-[92px] max-sm:py-16">
       <Wrap>
-        <Reveal>
-          <Kicker>Проблема</Kicker>
-          <H2>AI-инструменты читают быстрее, чем DLP успевает среагировать</H2>
+        <Reveal className="max-w-[640px]">
+          <Kicker>Problem framing</Kicker>
+          <H2>Периметр не видит момент, когда AI-инструмент уже получил данные.</H2>
           <Lead>
-            Разработчик подключил coding-агента — и тот за минуту выполнил больше
-            команд, чем человек за час. Каждая команда возвращает вывод, и этот
-            вывод уходит в контекст внешней модели автоматически — без злого
-            умысла, просто потому что так работает агент.
+            Утечка происходит не на сетевом шлюзе и не в SIEM. Она происходит в
+            той точке, где workstation отдаёт вывод команды, MCP-ответ или
+            clipboard прямо в агентский runtime.
           </Lead>
         </Reveal>
-        <div className="mt-11 grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-          {pains.map((p) => (
-            <Reveal key={p.title}>
+
+        <div className="mt-10 grid grid-cols-2 gap-5 max-md:grid-cols-1">
+          {pains.map((pain) => (
+            <Reveal key={pain.title}>
               <Card className="h-full">
-                <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-[13px] bg-blue-soft font-mono text-[15px] font-semibold text-blue">
-                  {p.ico}
-                </span>
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">{p.title}</h3>
-                <p className="text-[15px] text-muted">{p.text}</p>
+                <div className="font-mono text-[11px] uppercase tracking-[0.09em] text-blue">
+                  {pain.ico}
+                </div>
+                <h3 className="mt-3 text-[27px] font-light leading-[1.2] tracking-[-0.014em] text-carbon">
+                  {pain.title}
+                </h3>
+                <p className="mt-3 text-[16px] leading-[1.57] text-slate">{pain.text}</p>
               </Card>
             </Reveal>
           ))}
         </div>
+
         <Reveal>
-          <p className="mt-9 max-w-[780px] rounded-2xl border border-line border-l-4 border-l-amber bg-white px-[26px] py-5 text-muted">
-            <b className="text-ink">Сетевой шлюз не решает задачу:</b> он стоит не
-            там. Данные покидают рабочую станцию раньше, чем централизованные
-            системы вообще узнают о событии.
-          </p>
+          <div className="mt-6 rounded-card border border-silver bg-paper px-5 py-4">
+            <div className="font-mono text-[11px] uppercase tracking-[0.09em] text-fog">
+              key conclusion
+            </div>
+            <p className="mt-2 text-[16px] leading-[1.57] text-slate">
+              Сетевой шлюз просто стоит позже. К этому моменту контекст уже был
+              собран. Поэтому enforcement должен жить на рабочей станции.
+            </p>
+          </div>
         </Reveal>
       </Wrap>
     </section>

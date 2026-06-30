@@ -8,32 +8,52 @@ export function Wrap({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto max-w-[1140px] px-6 max-sm:px-[18px] ${className}`}>
+    <div className={`mx-auto max-w-[1200px] px-6 max-sm:px-[18px] ${className}`}>
       {children}
     </div>
   );
 }
 
-export function Kicker({ children }: { children: React.ReactNode }) {
+export function Kicker({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <span className="mb-3.5 block text-[13px] font-semibold uppercase tracking-[.12em] text-blue">
+    <span
+      className={`mb-3 inline-flex font-mono text-[11px] uppercase tracking-[0.09em] text-blue ${className}`}
+    >
       {children}
     </span>
   );
 }
 
-export function H2({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="mb-3.5 text-[clamp(27px,3.4vw,40px)] font-semibold leading-[1.18] tracking-[-.015em] text-[#222]">
-      {children}
-    </h2>
-  );
+export function H2({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+    return (
+      <h2
+        className={`mb-4 text-[clamp(34px,4vw,54px)] font-light leading-[1.08] tracking-[-0.019em] text-carbon ${className}`}
+      >
+        {children}
+      </h2>
+    );
 }
 
-export function Lead({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="max-w-[660px] text-[clamp(16px,1.6vw,19px)] text-muted">{children}</p>
-  );
+export function Lead({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <p className={`max-w-[640px] text-[18px] leading-[1.55] text-slate ${className}`}>{children}</p>;
 }
 
 export function BtnPrimary({
@@ -50,8 +70,10 @@ export function BtnPrimary({
   return (
     <Link
       href={href}
-      className={`inline-block whitespace-nowrap rounded-full bg-blue font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta ${
-        small ? "px-[22px] py-2.5 text-[14.5px] max-sm:px-3.5 max-sm:py-2 max-sm:text-[13px]" : "px-7 py-[13px] text-[15.5px]"
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-[8px] bg-blue font-medium text-white transition-colors duration-200 hover:bg-blue-bright ${
+        small
+          ? "px-[16px] py-[10px] text-[13px]"
+          : "px-[18px] py-[13px] text-[14px]"
       } ${className}`}
     >
       {children}
@@ -62,14 +84,16 @@ export function BtnPrimary({
 export function BtnGhost({
   href,
   children,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Link
       href={href}
-      className="inline-block whitespace-nowrap rounded-full border border-[#d6dcec] bg-white px-7 py-[13px] text-[15.5px] font-semibold text-ink transition-all duration-200 hover:border-blue hover:text-blue"
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-[8px] border border-silver bg-white px-[18px] py-[13px] text-[14px] font-medium text-carbon transition-colors duration-200 hover:border-blue hover:text-blue ${className}`}
     >
       {children}
     </Link>
@@ -84,9 +108,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div
-      className={`rounded-card border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-card ${className}`}
-    >
+    <div className={`rounded-card border border-silver bg-paper p-5 ${className}`}>
       {children}
     </div>
   );
@@ -94,7 +116,7 @@ export function Card({
 
 export function Code({ children }: { children: React.ReactNode }) {
   return (
-    <code className="rounded-[5px] bg-soft px-1.5 py-px font-mono text-[13px] text-blue">
+    <code className="rounded-[4px] bg-blue-soft px-1.5 py-px font-mono text-[12px] tracking-[0.08em] text-blue">
       {children}
     </code>
   );

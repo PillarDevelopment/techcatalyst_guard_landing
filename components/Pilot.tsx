@@ -28,14 +28,10 @@ export default function Pilot() {
   };
 
   const field =
-    "w-full rounded-xl border border-line bg-soft px-4 py-[13px] text-[15px] text-ink transition-colors focus:border-blue focus:bg-white focus:outline-none";
+    "w-full rounded-card border border-line bg-paper px-4 py-[13px] text-[15px] text-ink transition-colors focus:border-blue focus:outline-none";
 
   return (
-    <section
-      id="pilot"
-      className="py-[92px] max-sm:py-16"
-      style={{ background: "linear-gradient(180deg,#f9fafc,#fff)" }}
-    >
+    <section id="pilot" className="bg-soft py-[92px] max-sm:py-16">
       <Wrap className="grid grid-cols-2 gap-14 max-md:grid-cols-1">
         <Reveal>
           <Kicker>Пилотная программа</Kicker>
@@ -62,32 +58,32 @@ export default function Pilot() {
             className="rounded-panel border border-line bg-white p-9 shadow-card max-sm:rounded-card max-sm:p-5"
           >
             <div className="mb-4">
-              <label htmlFor="f-name" className="mb-[7px] block text-[13.5px] font-medium text-muted">
+              <label htmlFor="f-name" className="mb-[7px] block font-mono text-[11px] uppercase tracking-[0.08em] text-fog">
                 Имя
               </label>
               <input id="f-name" name="name" type="text" required autoComplete="name" placeholder="Иван Петров" className={field} />
             </div>
             <div className="mb-4">
-              <label htmlFor="f-company" className="mb-[7px] block text-[13.5px] font-medium text-muted">
+              <label htmlFor="f-company" className="mb-[7px] block font-mono text-[11px] uppercase tracking-[0.08em] text-fog">
                 Компания
               </label>
               <input id="f-company" name="company" type="text" required autoComplete="organization" placeholder="ООО «Компания»" className={field} />
             </div>
             <div className="mb-4">
-              <label htmlFor="f-email" className="mb-[7px] block text-[13.5px] font-medium text-muted">
+              <label htmlFor="f-email" className="mb-[7px] block font-mono text-[11px] uppercase tracking-[0.08em] text-fog">
                 Рабочий e-mail
               </label>
               <input id="f-email" name="email" type="email" required autoComplete="email" placeholder="name@company.ru" className={field} />
             </div>
             <div className="mb-4">
-              <label htmlFor="f-msg" className="mb-[7px] block text-[13.5px] font-medium text-muted">
+              <label htmlFor="f-msg" className="mb-[7px] block font-mono text-[11px] uppercase tracking-[0.08em] text-fog">
                 Комментарий
               </label>
               <textarea id="f-msg" name="msg" placeholder="Размер команды разработки, интересующие сценарии…" className={`${field} min-h-[88px] resize-y`} />
             </div>
             <button
               type="submit"
-              className="w-full rounded-full bg-blue px-7 py-[15px] text-base font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
+              className="w-full rounded-[8px] bg-blue px-7 py-[15px] text-[14px] font-medium text-white transition-colors duration-200 hover:bg-blue-bright"
             >
               Запросить пилот
             </button>

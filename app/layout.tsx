@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { IBM_Plex_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({
+const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-rubik",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500"],
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://guard.techcatalyst.ru"),
-  title: "Защита рабочих станций разработчиков от утечек в AI | Techcatalyst Guard",
+  title: "Techcatalyst Guard | On-prem защита AI-агентов на рабочих станциях",
   description:
-    "On-prem решение для перехвата команд и маскирования секретов и PII на рабочих станциях разработчиков. Терминал, MCP, clipboard — под контролем ваших политик. Данные не покидают контур.",
+    "Techcatalyst Guard перехватывает команды терминала, MCP-ответы и clipboard на рабочей станции разработчика. On-prem контроль, централизованные политики и маскирование секретов до отправки в AI.",
   keywords:
-    "DLP для разработчиков, защита секретов от AI, on-prem DLP терминал, контроль MCP, маскирование секретов, PII, защита рабочих станций",
+    "Techcatalyst Guard, AI workstation security, on-prem security, защита терминала, контроль MCP, маскирование секретов, security for coding agents",
   openGraph: {
-    title: "Techcatalyst Guard — учётные данные не покидают рабочую станцию",
+    title: "Techcatalyst Guard — контроль AI-агентов на рабочих станциях",
     description:
-      "Перехват команд терминала, маскирование секретов и PII в реальном времени, strict mode и on-prem панель управления.",
+      "On-prem платформа для контроля терминала, MCP и clipboard до того, как данные попадут во внешнюю модель.",
     type: "website",
     locale: "ru_RU",
   },
@@ -29,7 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru" className={rubik.variable}>
+    <html lang="ru" className={`${manrope.variable} ${plexMono.variable}`}>
       <body className="font-sans">{children}</body>
     </html>
   );
