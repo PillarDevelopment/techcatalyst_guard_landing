@@ -18,15 +18,15 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://guard.techcatalyst.ru"),
-  title: "Techcatalyst Guard | On-prem защита AI-агентов на рабочих станциях",
+  title: "Techcatalyst Guard | локальная защита агентских систем на рабочих станциях",
   description:
-    "Techcatalyst Guard перехватывает команды терминала, MCP-ответы и clipboard на рабочей станции разработчика. On-prem контроль, централизованные политики и маскирование секретов до отправки в AI.",
+    "Techcatalyst Guard перехватывает команды терминала, ответы инструментов и буфер обмена на рабочей станции разработчика. Локальный контур, централизованные политики и скрытие секретов до передачи во внешнюю модель.",
   keywords:
-    "Techcatalyst Guard, AI workstation security, on-prem security, защита терминала, контроль MCP, маскирование секретов, security for coding agents",
+    "Techcatalyst Guard, защита терминала, контроль MCP, защита рабочей станции разработчика, скрытие секретов, агентские системы, локальный контур безопасности",
   openGraph: {
-    title: "Techcatalyst Guard — контроль AI-агентов на рабочих станциях",
+    title: "Techcatalyst Guard — контроль агентских систем на рабочих станциях",
     description:
-      "On-prem платформа для контроля терминала, MCP и clipboard до того, как данные попадут во внешнюю модель.",
+      "Локальная платформа для контроля терминала, MCP и буфера обмена до того, как данные попадут во внешнюю модель.",
     type: "website",
     locale: "ru_RU",
   },

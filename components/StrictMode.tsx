@@ -3,9 +3,9 @@ import Reveal from "./Reveal";
 import { BtnPrimary, H2, Kicker, Wrap } from "./ui";
 
 const points = [
-  "Подписанные policy snapshots и локальная проверка целостности",
-  "Tamper detection с переходом в strict fallback",
-  "Без локального opt-out для критичных групп",
+  "Подписанные снимки политик и локальная проверка целостности",
+  "Контроль подмены с переходом в аварийный строгий режим",
+  "Без локального отключения для критичных групп",
   "В события попадают только факты и категории данных",
 ];
 
@@ -14,8 +14,8 @@ export default function StrictMode() {
     <section id="strict" className="midnight-band py-[92px] max-sm:py-16">
       <Wrap className="grid grid-cols-[0.84fr_1.16fr] items-center gap-10 max-lg:grid-cols-1">
         <Reveal>
-          <Kicker className="text-arc">Trust model</Kicker>
-          <H2 className="text-white">Strict mode удерживает контроль даже при попытке обхода.</H2>
+          <Kicker className="text-arc">Модель доверия</Kicker>
+          <H2 className="text-white">Строгий режим удерживает контроль даже при попытке обхода.</H2>
           <ul className="mt-6 space-y-3">
             {points.map((point) => (
               <li key={point} className="flex gap-3 text-[16px] leading-[1.57] text-halo">
@@ -25,9 +25,9 @@ export default function StrictMode() {
             ))}
           </ul>
           <p className="mt-6 max-w-[540px] text-[16px] leading-[1.57] text-halo">
-            Граница гарантий фиксируется честно: strict mode закрывает штатный
-            обход и случайную утечку. Для root-level adversary мы публикуем
-            threat model и предлагаем проверку в пилоте.
+            Граница гарантий фиксируется честно: строгий режим закрывает штатный
+            обход и случайную утечку. Для сценариев с полным административным доступом
+            мы публикуем модель угроз и предлагаем проверку в пилоте.
           </p>
           <div className="mt-7">
             <BtnPrimary href="#pilot">Проверить в своём контуре</BtnPrimary>

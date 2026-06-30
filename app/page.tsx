@@ -20,10 +20,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Problem />
         <HowItWorks />
-        <LLMFirewall />
         <Features />
+        <Problem />
+        <LLMFirewall />
         <StrictMode />
         <Deploy />
         <Roles />

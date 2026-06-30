@@ -14,21 +14,21 @@ const SCRIPT: Line[] = [
     t: "out",
     text: "DATABASE_URL=postgres://prod:",
     secret: "S3cr3t!9pwd",
-    mask: "[MASKED:DB_PASSWORD]",
+    mask: "[СКРЫТО:ПАРОЛЬ_БД]",
     tail: "@db.internal:5432/payments",
   },
   {
     t: "out",
     text: "AWS_ACCESS_KEY_ID=",
     secret: "AKIAIOSFODNN7EXAMPLE",
-    mask: "[MASKED:AWS_KEY]",
+    mask: "[СКРЫТО:КЛЮЧ_AWS]",
     tail: "",
   },
   {
     t: "out",
     text: "STRIPE_SECRET_KEY=",
     secret: "sk_live_fake_fake",
-    mask: "[MASKED:STRIPE_KEY]",
+    mask: "[СКРЫТО:КЛЮЧ_ПЛАТЕЖЕЙ]",
     tail: "",
   },
   {
@@ -41,19 +41,19 @@ const SCRIPT: Line[] = [
     t: "out",
     text: "login ok · ",
     secret: "ivanov@corp.ru",
-    mask: "[MASKED:EMAIL]",
+    mask: "[СКРЫТО:ПОЧТА]",
     tail: " · ip 10.2.14.8",
   },
   {
     t: "out",
     text: "payment · card ",
     secret: "4276 8312 0044 9921",
-    mask: "[MASKED:PAN]",
+    mask: "[СКРЫТО:КАРТА]",
     tail: " · status=ok",
   },
   {
     t: "status",
-    text: "▲ guard: PII замаскированы в потоке вывода · mode=strict",
+    text: "▲ guard: личные данные скрыты в потоке вывода · строгий режим",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function TerminalDemo() {
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f1645a]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f5b73d]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#35c84a]" />
-        <span className="ml-2 text-xs text-dim">protected shell — guard agent v1.0</span>
+        <span className="ml-2 text-xs text-dim">защищённая оболочка — guard agent v1.0</span>
       </div>
       <div
         ref={bodyRef}

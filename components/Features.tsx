@@ -1,73 +1,65 @@
 import FakeDashboard from "./FakeDashboard";
 import Reveal from "./Reveal";
-import { Card, H2, Kicker, Lead, Wrap } from "./ui";
+import { H2, Kicker, Lead, Wrap } from "./ui";
 
 const features = [
   {
-    label: "terminal",
-    title: "Защита терминала",
-    text: "Streaming-маскирование stdout/stderr в реальном времени. Секреты и PII не попадают в контекст coding-агента.",
+    title: "Единый обзор состояния",
+    text: "Парк рабочих станций, события, распределение по каналам и история срабатываний собираются в один продуктовый экран.",
+    variant: "overview" as const,
   },
   {
-    label: "mcp",
-    title: "Контроль MCP",
-    text: "Локальный proxy инспектирует JSON-RPC, ограничивает ресурсы и маскирует ответы без поломки протокола.",
+    title: "Редактор и выпуск политик",
+    text: "Правила проходят путь от черновика до публикации. Можно управлять действиями, каналами и областями применения без ручной раскатки по машинам.",
+    variant: "policy" as const,
   },
   {
-    label: "policy",
-    title: "Policy lifecycle",
-    text: "Draft → review → live, подписи снапшотов, scope по ролям и станциям, публикация на весь парк рабочих мест.",
-  },
-  {
-    label: "repo",
-    title: "Сканер репозиториев",
-    text: "Локальный поиск секретов и PII в рабочей копии: benchmark-отчёты, suppression-правила и воспроизводимые метрики.",
+    title: "Контроль парка и действий оператора",
+    text: "Операционная команда видит, где нужен строгий режим, какие станции выпали из контура и какие шаги нужно сделать прямо сейчас.",
+    variant: "fleet" as const,
   },
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="midnight-band py-[92px] max-sm:py-16">
+    <section id="features" className="bg-paper pb-[92px] max-sm:pb-16">
+      <div className="section-transition" />
       <Wrap>
-        <Reveal className="max-w-[620px]">
-          <Kicker className="text-arc">Product surfaces</Kicker>
-          <H2 className="text-white">
-            Одна платформа. Несколько продуктовых поверхностей.
+        <Reveal className="mx-auto max-w-[760px] text-center">
+          <Kicker>Продуктовые экраны</Kicker>
+          <H2>
+            Светлая продуктовая поверхность показывает то, что реально
+            происходит в контуре.
           </H2>
-          <Lead className="text-halo">
-            Для пользователя это не только агент на рабочей станции. Это ещё и
-            панель политик, fleet health и incident console. Пока без реальных
-            скриншотов — здесь стоят временные product mockups.
+          <Lead className="mx-auto">
+            Ниже временные макеты экранов в логике референса: обзор, выпуск
+            политик и управление парком рабочих станций. Позже их можно
+            заменить на реальные снимки продукта без переделки структуры.
           </Lead>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-[1.05fr_0.95fr] gap-5 max-lg:grid-cols-1">
-          <Reveal>
-            <FakeDashboard variant="policy" />
-          </Reveal>
-          <Reveal>
-            <div className="space-y-5">
-              {features.map((feature) => (
-                <Card
-                  key={feature.title}
-                  className="border-white/12 bg-white/5 text-white"
-                >
-                  <div className="font-mono text-[11px] uppercase tracking-[0.09em] text-arc">
-                    {feature.label}
+        <div className="mt-12 space-y-10">
+          {features.map((feature, index) => (
+            <Reveal key={feature.title}>
+              <div className="grid items-center gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                  <div className="font-mono text-[11px] uppercase tracking-[0.09em] text-blue">
+                    экран {index + 1}
                   </div>
-                  <h3 className="mt-3 text-[27px] font-light leading-[1.2] tracking-[-0.014em] text-white">
+                  <h3 className="mt-3 max-w-[12ch] text-[35px] font-light leading-[1.12] tracking-[-0.014em] text-carbon">
                     {feature.title}
                   </h3>
-                  <p className="mt-3 text-[16px] leading-[1.57] text-halo">{feature.text}</p>
-                </Card>
-              ))}
-            </div>
-          </Reveal>
+                  <p className="mt-4 max-w-[520px] text-[16px] leading-[1.57] text-slate">
+                    {feature.text}
+                  </p>
+                </div>
+                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                  <FakeDashboard variant={feature.variant} />
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
-
-        <Reveal className="mt-5">
-          <FakeDashboard variant="fleet" />
-        </Reveal>
       </Wrap>
     </section>
   );

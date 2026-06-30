@@ -6,7 +6,7 @@ const links = [
   { href: "#how", label: "Схема" },
   { href: "#features", label: "Продукт" },
   { href: "#deploy", label: "Контур" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#faq", label: "Вопросы" },
 ];
 
 export default function Header() {

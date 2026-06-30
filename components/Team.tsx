@@ -3,12 +3,12 @@ import Reveal from "./Reveal";
 
 const principles = [
   {
-    title: "Founder-led продукт",
-    text: "Архитектура, threat model, пилоты и product decisions не делегированы в сторону. За решение отвечает команда, которая его проектирует и внедряет.",
+    title: "Продукт ведёт основатель",
+    text: "Архитектура, модель угроз, пилоты и продуктовые решения не делегированы в сторону. За решение отвечает команда, которая его проектирует и внедряет.",
   },
   {
-    title: "Security + developer tooling",
-    text: "Фокус не на абстрактной DLP-риторике, а на реальном поведении coding-агентов, терминала, MCP-инструментов и рабочих станций разработчиков.",
+    title: "Безопасность плюс инструменты разработки",
+    text: "Фокус не на абстрактной DLP-риторике, а на реальном поведении агентских систем, терминала, MCP-инструментов и рабочих станций разработчиков.",
   },
   {
     title: "Пилоты в контуре заказчика",
@@ -22,10 +22,10 @@ export default function Team() {
       <Wrap>
         <Reveal>
           <Kicker>Команда</Kicker>
-          <H2>Founder-led команда, которая строит AI security вокруг реального developer workflow</H2>
+          <H2>Команда, которая строит защиту ИИ вокруг реального рабочего процесса разработчика</H2>
           <Lead>
-            Techcatalyst Guard развивается как инженерный security-продукт: от
-            модели угроз и локального enforcement до пилотов в инфраструктуре
+            Techcatalyst Guard развивается как инженерный продукт безопасности: от
+            модели угроз и локального контура исполнения до пилотов в инфраструктуре
             заказчика.
           </Lead>
         </Reveal>
@@ -34,19 +34,19 @@ export default function Team() {
           <Reveal>
             <div className="rounded-panel border border-line bg-white p-8 shadow-panel">
               <div className="mb-3 inline-flex rounded-full bg-blue-soft px-3 py-1 text-[12px] font-semibold uppercase tracking-[.1em] text-blue">
-                Founder
+                Основатель
               </div>
               <h3 className="text-[28px] font-semibold tracking-[-.02em] text-[#222]">
                 Иван Борисов
               </h3>
               <p className="mt-4 max-w-[720px] text-[16px] leading-8 text-muted">
                 Основатель Techcatalyst. Ведёт продукт, архитектуру и работу с
-                пилотами на стыке AI-инфраструктуры, developer tooling и
-                security controls для рабочих станций разработчиков.
+                пилотами на стыке инфраструктуры ИИ, инструментов разработки и
+                механизмов защиты для рабочих станций разработчиков.
               </p>
               <p className="mt-4 max-w-[720px] text-[15px] leading-7 text-muted">
                 Если вам важно поговорить не с «пресейлом по презентации», а с
-                человеком, который реально проектирует enforcement-слой, модель
+                человеком, который реально проектирует исполняющий контур, модель
                 политик и границы гарантий, этот диалог идёт напрямую с
                 основателем.
               </p>
