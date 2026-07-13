@@ -49,7 +49,7 @@ export default function Features() {
                 <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-[13px] bg-blue-soft font-mono text-[15px] font-semibold text-blue">
                   {f.ico}
                 </span>
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">{f.title}</h3>
+                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{f.title}</h3>
                 <p className="text-[15px] text-muted">{f.text}</p>
               </Card>
             </Reveal>

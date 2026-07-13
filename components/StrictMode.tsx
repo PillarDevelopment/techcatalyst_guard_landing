@@ -31,7 +31,7 @@ export default function StrictMode() {
             {points.map((p) => (
               <li
                 key={p.b}
-                className="flex gap-3.5 border-b border-[#e6eaf4] py-[15px] text-base last:border-b-0"
+                className="flex gap-3.5 border-b border-[#e4e8f4] py-[15px] text-base last:border-b-0"
               >
                 <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-green/10 text-[13px] font-bold text-green">
                   ✓

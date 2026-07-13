@@ -48,10 +48,10 @@ export default function Clients() {
           {namedClients.map((client) => (
             <Reveal key={client.name}>
               <Card className="h-full">
-                <div className="mb-3 text-[12px] font-semibold uppercase tracking-[.12em] text-blue">
+                <div className="mb-3 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] before:mr-2 before:content-['//'] text-blue">
                   {client.period}
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">{client.name}</h3>
+                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{client.name}</h3>
                 <p className="text-[15px] text-muted">{client.work}</p>
               </Card>
             </Reveal>
@@ -61,7 +61,7 @@ export default function Clients() {
         <div className="mt-5 grid grid-cols-[1.05fr_.95fr] gap-5 max-lg:grid-cols-1">
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-3 text-[20px] font-semibold text-[#222]">Проекты по соглашениям о конфиденциальности</h3>
+              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">Проекты по соглашениям о конфиденциальности</h3>
               <p className="mb-4 text-[15px] text-muted">
                 Часть проектов ИИ и инфраструктуры промежуточного доступа защищена соглашениями
                 о конфиденциальности. Публичный список содержит названия компаний,
@@ -82,7 +82,7 @@ export default function Clients() {
 
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-3 text-[20px] font-semibold text-[#222]">Какие задачи уже делали</h3>
+              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">Какие задачи уже делали</h3>
               <ul className="space-y-3 text-[15px] text-muted">
                 <li className="relative pl-[22px] before:absolute before:left-0 before:top-[7px] before:font-bold before:text-green before:content-['✓']">
                   доступ к LLM и proxy-инфраструктура для работы с AI-моделями

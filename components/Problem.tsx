@@ -50,7 +50,7 @@ export default function Problem() {
                 <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-[13px] bg-blue-soft font-mono text-[15px] font-semibold text-blue">
                   {p.ico}
                 </span>
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">{p.title}</h3>
+                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{p.title}</h3>
                 <p className="text-[15px] text-muted">{p.text}</p>
               </Card>
             </Reveal>

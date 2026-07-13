@@ -82,10 +82,10 @@ export default function LLMFirewall() {
           {layers.map((item) => (
             <Reveal key={item.title}>
               <Card className="h-full">
-                <span className="mb-[18px] inline-flex rounded-full bg-blue-soft px-3 py-1 text-[12px] font-semibold uppercase tracking-[.1em] text-blue">
+                <span className="mb-[18px] inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
                   Уровень
                 </span>
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">{item.title}</h3>
+                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{item.title}</h3>
                 <p className="text-[15px] text-muted">{item.text}</p>
               </Card>
             </Reveal>
@@ -95,14 +95,14 @@ export default function LLMFirewall() {
         <div className="mt-12 grid grid-cols-[1.05fr_.95fr] gap-5 max-lg:grid-cols-1">
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-4 text-[22px] font-semibold text-[#222]">
+              <h3 className="mb-4 text-[22px] font-semibold text-[#0d1326]">
                 Что делает защитный слой в контуре разработчика
               </h3>
               <ul className="space-y-3">
                 {controls.map((item) => (
                   <li
                     key={item.b}
-                    className="flex gap-3.5 border-b border-[#e6eaf4] py-[13px] text-base last:border-b-0"
+                    className="flex gap-3.5 border-b border-[#e4e8f4] py-[13px] text-base last:border-b-0"
                   >
                     <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-green/10 text-[13px] font-bold text-green">
                       ✓
@@ -118,7 +118,7 @@ export default function LLMFirewall() {
 
           <Reveal>
             <div className="rounded-card border border-line bg-white p-[26px] shadow-panel">
-              <div className="mb-4 inline-flex rounded-full bg-blue-soft px-3 py-1 text-[12px] font-semibold uppercase tracking-[.1em] text-blue">
+              <div className="mb-4 inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
                 Контролируемые угрозы
               </div>
               <div className="rounded-2xl border border-line bg-soft p-5">

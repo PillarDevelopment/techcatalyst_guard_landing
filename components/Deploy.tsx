@@ -47,10 +47,10 @@ export default function Deploy() {
           {blocks.map((b) => (
             <Reveal key={b.title}>
               <Card className="h-full">
-                <h3 className="mb-2 text-lg font-semibold text-[#222]">
+                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">
                   {b.title}
                   {b.tag && (
-                    <span className="ml-2 inline-block rounded-full border border-amber/35 px-[11px] py-0.5 align-[2px] text-xs font-semibold tracking-[.03em] text-amber">
+                    <span className="ml-2 inline-block rounded-[10px] border border-amber/35 px-[11px] py-0.5 align-[2px] text-xs font-semibold tracking-[.03em] text-amber">
                       {b.tag}
                     </span>
                   )}
@@ -65,7 +65,7 @@ export default function Deploy() {
             {stack.map((s) => (
               <span
                 key={s}
-                className="rounded-full border border-line bg-white px-3.5 py-1.5 font-mono text-[13px] text-muted"
+                className="rounded-[10px] border border-line bg-white px-3.5 py-1.5 font-mono text-[13px] text-muted"
               >
                 {s}
               </span>

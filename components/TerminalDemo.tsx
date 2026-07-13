@@ -149,18 +149,18 @@ export default function TerminalDemo() {
 
   return (
     <div
-      className="overflow-hidden rounded-card border border-line bg-white shadow-panel font-mono text-[13.5px] leading-[1.75]"
+      className="overflow-hidden rounded-card border border-navy-line bg-navy-900 shadow-panel font-mono text-[13.5px] leading-[1.75]"
       aria-hidden="true"
     >
-      <div className="flex items-center gap-2 border-b border-line bg-soft px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-navy-line bg-navy-950 px-4 py-3">
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f1645a]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f5b73d]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#35c84a]" />
-        <span className="ml-2 text-xs text-dim">защищённый терминал — агент Guard v1.0</span>
+        <span className="ml-2 font-sans text-xs text-[#6a74a3]">защищённый терминал — агент Guard v1.0</span>
       </div>
       <div
         ref={bodyRef}
-        className="min-h-[340px] whitespace-pre-wrap break-all p-[18px] pb-[22px] text-muted max-md:min-h-[260px] max-md:text-xs"
+        className="min-h-[340px] whitespace-pre-wrap break-all p-[18px] pb-[22px] text-navy-text max-md:min-h-[260px] max-md:text-xs"
       />
     </div>
   );

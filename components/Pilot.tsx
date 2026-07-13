@@ -83,7 +83,7 @@ export default function Pilot() {
             </div>
             <button
               type="submit"
-              className="w-full rounded-full bg-blue px-7 py-[15px] text-base font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
+              className="w-full rounded-[10px] bg-blue px-7 py-[15px] text-base font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
             >
               Запросить пробное внедрение
             </button>

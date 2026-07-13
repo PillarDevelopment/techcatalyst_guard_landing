@@ -33,10 +33,10 @@ export default function Team() {
         <div className="mt-11 grid grid-cols-[1.08fr_.92fr] gap-5 max-lg:grid-cols-1">
           <Reveal>
             <div className="rounded-panel border border-line bg-white p-8 shadow-panel">
-              <div className="mb-3 inline-flex rounded-full bg-blue-soft px-3 py-1 text-[12px] font-semibold uppercase tracking-[.1em] text-blue">
+              <div className="mb-3 inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
                 Основатель
               </div>
-              <h3 className="text-[28px] font-semibold tracking-[-.02em] text-[#222]">
+              <h3 className="text-[28px] font-semibold tracking-[-.02em] text-[#0d1326]">
                 Иван Борисов
               </h3>
               <p className="mt-4 max-w-[720px] text-[16px] leading-8 text-muted">
@@ -53,13 +53,13 @@ export default function Team() {
                   href="https://www.linkedin.com/in/borisov-ivan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full bg-blue px-6 py-3 text-[14.5px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
+                  className="inline-flex items-center rounded-[10px] bg-blue px-6 py-3 text-[14.5px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
                 >
                   Профиль основателя
                 </a>
                 <a
                   href="#pilot"
-                  className="inline-flex items-center rounded-full border border-line bg-white px-6 py-3 text-[14.5px] font-semibold text-ink transition-colors hover:border-blue hover:text-blue"
+                  className="inline-flex items-center rounded-[10px] border border-line bg-white px-6 py-3 text-[14.5px] font-semibold text-ink transition-colors hover:border-blue hover:text-blue"
                 >
                   Обсудить пробное внедрение
                 </a>
@@ -71,7 +71,7 @@ export default function Team() {
             {principles.map((item) => (
               <Reveal key={item.title}>
                 <Card className="h-full">
-                  <h3 className="mb-2 text-lg font-semibold text-[#222]">{item.title}</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{item.title}</h3>
                   <p className="text-[15px] text-muted">{item.text}</p>
                 </Card>
               </Reveal>

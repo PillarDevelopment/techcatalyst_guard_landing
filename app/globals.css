@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --blue: #1837da;
-  --blue-bright: #0046f9;
-  --blue-soft: #e2e2fd;
-  --text: #313131;
-  --muted: #63666a;
-  --border: #edf0f7;
+  --blue: #2b46f0;
+  --blue-bright: #1c33d4;
+  --blue-soft: #e3e9ff;
+  --text: #232a42;
+  --heading: #0d1326;
+  --muted: #565e78;
+  --border: #e4e8f4;
 }
 
 html {
@@ -20,6 +21,7 @@ body {
   color: var(--text);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -40,7 +42,7 @@ input:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(148, 185, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(43, 70, 240, 0.28);
 }
 
 /* reveal on scroll */
@@ -54,28 +56,44 @@ summary:focus-visible {
   transform: none;
 }
 
-/* terminal demo (innerHTML content) */
-.t-prompt { color: #1837da; }
-.t-cmd { color: #222; font-weight: 500; }
-.t-out { color: #63666a; }
+/* engineering grid backdrop */
+.bg-grid-light {
+  background-image: linear-gradient(rgba(13, 19, 38, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 19, 38, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(640px 380px at 82% -8%, #000 30%, transparent 72%);
+  mask-image: radial-gradient(640px 380px at 82% -8%, #000 30%, transparent 72%);
+}
+.bg-grid-dark {
+  background-image: linear-gradient(rgba(124, 140, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 140, 255, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(680px 420px at 80% -10%, #000 25%, transparent 70%);
+  mask-image: radial-gradient(680px 420px at 80% -10%, #000 25%, transparent 70%);
+}
+
+/* terminal demo (innerHTML content) — dark navy window */
+.t-prompt { color: #7c8cff; }
+.t-cmd { color: #e8ecff; font-weight: 500; }
+.t-out { color: #8b94c0; }
 .t-secret {
-  color: #d22e44;
-  background: rgba(224, 53, 84, 0.09);
+  color: #ff6b81;
+  background: rgba(255, 107, 129, 0.12);
   border-radius: 4px;
   padding: 0 3px;
 }
 .t-masked {
-  color: #0c9a0c;
-  background: rgba(16, 188, 16, 0.1);
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
   border-radius: 4px;
   padding: 0 3px;
 }
-.t-status { color: #1837da; }
+.t-status { color: #7c8cff; }
 .t-caret {
   display: inline-block;
   width: 8px;
   height: 15px;
-  background: #1837da;
+  background: #7c8cff;
   vertical-align: -2px;
   animation: blink 1s steps(1) infinite;
 }
@@ -87,7 +105,7 @@ summary:focus-visible {
 summary::-webkit-details-marker { display: none; }
 details summary::after {
   content: "+";
-  color: #1837da;
+  color: #2b46f0;
   font-size: 22px;
   font-weight: 400;
   flex: none;

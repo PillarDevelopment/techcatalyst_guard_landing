@@ -1,0 +1,23 @@
+{
+  "projectId": "878aae20-0d99-4165-b91a-b01eb0f3c2ca",
+  "shape": "package",
+  "pkg": "sai-landing",
+  "globalName": "TechCatalystGuardUI",
+  "srcDir": "components",
+  "entry": "./dist/index.js",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": ".design-sync/styles.compiled.css",
+  "libOverrides": { "dts.mjs": "H2 heading primitive matches the ALL_CAPS constant filter — allow H1-H6" },
+  "extraFonts": [".design-sync/preview-support/fonts.css"],
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "BtnGhost": { "cardMode": "column" },
+    "H2": { "cardMode": "column" },
+    "Header": { "cardMode": "column" }
+  },
+  "extraEntries": [
+    "./.design-sync/preview-support/env-shim.ts",
+    "./.design-sync/preview-support/sections-barrel.ts"
+  ],
+  "buildCmd": "npx tailwindcss -c tailwind.config.ts -i app/globals.css -o .design-sync/styles.compiled.css --content './components/**/*.tsx,./app/**/*.tsx,./.design-sync/previews/**/*.tsx' --minify"
+}

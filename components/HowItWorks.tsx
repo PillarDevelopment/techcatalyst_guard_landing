@@ -49,7 +49,7 @@ export default function HowItWorks() {
                 <span className="mb-[18px] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-blue text-sm font-bold text-white">
                   0{i + 1}
                 </span>
-                <h3 className="mb-2.5 text-[18.5px] font-semibold text-[#222]">
+                <h3 className="mb-2.5 text-[18.5px] font-semibold text-[#0d1326]">
                   {s.title}
                 </h3>
                 <p className="text-[15px] text-muted">{s.text}</p>

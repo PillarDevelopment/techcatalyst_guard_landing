@@ -55,7 +55,7 @@ export default function Faq() {
               key={f.q}
               className="mb-3 rounded-2xl border border-line bg-white px-[26px] transition-shadow open:shadow-card"
             >
-              <summary className="flex cursor-pointer list-none justify-between gap-[18px] py-5 text-[17px] font-semibold text-[#222]">
+              <summary className="flex cursor-pointer list-none justify-between gap-[18px] py-5 text-[17px] font-semibold text-[#0d1326]">
                 {f.q}
               </summary>
               <p className="max-w-[690px] pb-[22px] text-[15.5px] text-muted">{f.a}</p>
