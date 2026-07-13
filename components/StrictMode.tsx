@@ -7,16 +7,16 @@ const points = [
     text: "Каждый снапшот политики подписывается сервером и проверяется агентом локально.",
   },
   {
-    b: "Tamper detection.",
-    text: "Ручная правка конфига или политики обнаруживается — агент переходит в строгий fallback и сообщает в контур.",
+    b: "Контроль целостности.",
+    text: "Ручное изменение настроек или политики обнаруживается — агент включает строгий резервный режим и сообщает событие в контур.",
   },
   {
-    b: "Без локального опт-аута.",
-    text: "В strict mode пользователь не может отключить агент или shell-интеграции.",
+    b: "Постоянная локальная защита.",
+    text: "В строгом режиме агент и интеграции с командной оболочкой сохраняют активное состояние.",
   },
   {
     b: "Минимизация телеметрии.",
-    text: "В события попадают факты срабатываний, а не сырые секреты.",
+    text: "События содержат факты срабатываний, а исходные значения остаются на рабочей станции.",
   },
 ];
 
@@ -25,8 +25,8 @@ export default function StrictMode() {
     <section id="strict" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 items-center gap-14 max-md:grid-cols-1">
         <Reveal>
-          <Kicker>Trust model</Kicker>
-          <H2>Strict mode: защита, которую нельзя выключить</H2>
+          <Kicker>Модель доверия</Kicker>
+          <H2>Строгий режим: постоянная защита рабочей станции</H2>
           <ul className="mt-2.5">
             {points.map((p) => (
               <li
@@ -43,11 +43,11 @@ export default function StrictMode() {
             ))}
           </ul>
           <p className="mt-6 rounded-2xl border border-line border-l-4 border-l-blue bg-white px-[22px] py-4 text-[15px] text-muted">
-            <b className="text-ink">Граница гарантий — честно.</b> Strict mode
+            <b className="text-ink">Граница гарантий — честно.</b> Строгий режим
             закрывает штатный обход, случайную утечку и отключение «в один
-            клик». Мы не обещаем магии против пользователя с полным root и
-            неограниченным временем — поэтому публикуем модель угроз и приглашаем
-            вашу red team проверить агент в пилоте.
+            клик». Модель угроз отдельно фиксирует сценарии пользователя с
+            полными правами администратора. Команда заказчика может проверить
+            агент в ходе пробного внедрения и испытаний на проникновение.
           </p>
           <div className="mt-7">
             <BtnPrimary href="#pilot">Проверить в своём контуре</BtnPrimary>
@@ -77,7 +77,7 @@ export default function StrictMode() {
             &nbsp;&nbsp;integrity:{" "}
             <span className="text-danger">FAILED — snapshot tampered</span>
             <br />
-            &nbsp;&nbsp;mode: <span className="text-amber">strict fallback engaged</span>
+            &nbsp;&nbsp;режим: <span className="text-amber">включён строгий резервный режим</span>
             <br />
             &nbsp;&nbsp;event:{" "}
             <span className="text-green-deep">reported to control plane ✓</span>

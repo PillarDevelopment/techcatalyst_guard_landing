@@ -1,7 +1,7 @@
 import { Wrap, Kicker, Lead, BtnPrimary, BtnGhost } from "./ui";
 import TerminalDemo from "./TerminalDemo";
 
-const chips = ["On-prem", "Strict mode", "Zero cloud dependency"];
+const chips = ["В контуре заказчика", "Строгий режим", "Локальная обработка"];
 
 export default function Hero() {
   return (
@@ -11,19 +11,19 @@ export default function Hero() {
     >
       <Wrap className="grid items-center gap-12 py-[78px] lg:grid-cols-[1.04fr_.96fr] lg:py-[104px]">
         <div>
-          <Kicker>On-prem workstation security</Kicker>
+          <Kicker>Безопасность рабочей станции</Kicker>
           <h1 className="mt-5 text-[clamp(38px,5.1vw,62px)] font-bold leading-[1.06] tracking-[-.035em] text-[#222]">
             Учётные данные остаются на рабочей станции.{" "}
-            <em className="not-italic text-blue">Даже когда с ней работает AI.</em>
+            <em className="not-italic text-blue">Под защитой при работе с ИИ.</em>
           </h1>
           <Lead>
             TechCatalyst Guard перехватывает команды терминала, ответы
-            MCP-инструментов и буфер обмена — и маскирует учётные данные и PII до того,
-            как их увидит AI-агент. Политики централизованы и защищены от
-            отключения. Всё работает on-prem.
+            инструментов MCP и буфер обмена — и маскирует учётные и персональные
+            данные до передачи ИИ-агенту. Централизованные политики сохраняют
+            целостность, а обработка выполняется в контуре заказчика.
           </Lead>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <BtnPrimary href="#pilot">Запросить пилот</BtnPrimary>
+            <BtnPrimary href="#pilot">Запросить пробное внедрение</BtnPrimary>
             <BtnGhost href="#pilot">Получить архитектуру решения</BtnGhost>
           </div>
           <div className="mt-7 flex flex-wrap gap-2.5">

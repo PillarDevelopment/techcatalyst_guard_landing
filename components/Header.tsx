@@ -2,7 +2,7 @@ const marketingUrl = process.env.NEXT_PUBLIC_MARKETING_URL || "https://techcatal
 
 const products = [
   { href: `${marketingUrl}/zakupka-zarubezhnogo-po`, label: "Зарубежное ПО" },
-  { href: `${marketingUrl}/postavka-i-integraciya-ai`, label: "AI и интеграция" },
+  { href: `${marketingUrl}/postavka-i-integraciya-ai`, label: "ИИ и интеграция" },
   { href: `${marketingUrl}/techcatalyst-vpn`, label: "TechCatalyst VPN" },
 ];
 

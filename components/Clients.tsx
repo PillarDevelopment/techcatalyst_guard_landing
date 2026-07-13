@@ -36,7 +36,7 @@ export default function Clients() {
       <Wrap>
         <Reveal>
           <Kicker>Клиенты и опыт</Kicker>
-          <H2>Команда опирается не на теорию, а на реальный опыт внедрения</H2>
+          <H2>Команда опирается на практический опыт внедрения</H2>
           <Lead>
             В `artifacts` проекта уже лежит справка об опыте. На лендинге
             показываем ту часть клиентского списка, которую корректно вынести в
@@ -61,11 +61,11 @@ export default function Clients() {
         <div className="mt-5 grid grid-cols-[1.05fr_.95fr] gap-5 max-lg:grid-cols-1">
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-3 text-[20px] font-semibold text-[#222]">NDA-контракты</h3>
+              <h3 className="mb-3 text-[20px] font-semibold text-[#222]">Проекты по соглашениям о конфиденциальности</h3>
               <p className="mb-4 text-[15px] text-muted">
-                Часть AI- и proxy-инфраструктурных проектов закрыта NDA, поэтому
-                публично показываем только названия компаний без раскрытия
-                деталей внедрения.
+                Часть проектов ИИ и инфраструктуры промежуточного доступа защищена соглашениями
+                о конфиденциальности. Публичный список содержит названия компаний,
+                а детали внедрения сохраняются в рамках договорных условий.
               </p>
               <ul className="space-y-3">
                 {ndaClients.map((name) => (

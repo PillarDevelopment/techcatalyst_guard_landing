@@ -6,11 +6,11 @@ import Reveal from "./Reveal";
 
 const includes = [
   "Развёртывание серверной части в контуре заказчика",
-  "Подключение пилотной группы рабочих станций",
-  "Benchmark качества детектирования на ваших репозиториях",
+  "Подключение пробной группы рабочих станций",
+  "Измерение качества детектирования на ваших репозиториях",
   "Критерии приёмки и границы гарантий фиксируем письменно до старта",
-  "Архитектурная схема, sizing и deployment requirements",
-  "Без vendor lock-in: контур, данные и агенты остаются под вашим контролем",
+  "Архитектурная схема, расчёт ресурсов и требования к развёртыванию",
+  "Технологическая самостоятельность: контур, данные и агенты остаются под вашим контролем",
 ];
 
 const CONTACT = "info@2rm.ru";
@@ -23,7 +23,7 @@ export default function Pilot() {
       `Имя: ${fd.get("name")}\nКомпания: ${fd.get("company")}\nE-mail: ${fd.get("email")}\n\n${fd.get("msg")}`
     );
     window.location.href = `mailto:${CONTACT}?subject=${encodeURIComponent(
-      "Заявка на пилот TechCatalyst Guard"
+      "Заявка на пробное внедрение TechCatalyst Guard"
     )}&body=${body}`;
   };
 
@@ -34,12 +34,12 @@ export default function Pilot() {
     <section id="pilot" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 gap-14 max-md:grid-cols-1">
         <Reveal>
-          <Kicker>Пилотная программа</Kicker>
+          <Kicker>Пробное внедрение</Kicker>
           <H2>Проверьте на своих репозиториях и своём контуре</H2>
           <Lead>
-            TechCatalyst Guard проходит стадию enterprise-пилотов. Мы
-            разворачиваем решение у вас и вместе измеряем результат. Не верьте
-            лендингу — дайте нам репозиторий и неделю.
+            TechCatalyst Guard проходит стадию корпоративных пробных внедрений. Мы
+            разворачиваем решение в вашей инфраструктуре и вместе измеряем
+            результат на рабочем репозитории.
           </Lead>
           <ul className="mt-[22px]">
             {includes.map((it) => (
@@ -85,11 +85,10 @@ export default function Pilot() {
               type="submit"
               className="w-full rounded-full bg-blue px-7 py-[15px] text-base font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
             >
-              Запросить пилот
+              Запросить пробное внедрение
             </button>
             <p className="mt-3.5 text-center text-[13.5px] text-dim">
-              Без облачных зависимостей: даже в пилоте данные не покидают вашу
-              инфраструктуру
+              Локальная архитектура: данные пробного внедрения остаются в вашей инфраструктуре
             </p>
             <p className="mt-2 text-center text-sm text-dim">
               или напишите нам:{" "}

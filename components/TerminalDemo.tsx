@@ -156,7 +156,7 @@ export default function TerminalDemo() {
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f1645a]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f5b73d]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#35c84a]" />
-        <span className="ml-2 text-xs text-dim">protected shell — guard agent v1.0</span>
+        <span className="ml-2 text-xs text-dim">защищённый терминал — агент Guard v1.0</span>
       </div>
       <div
         ref={bodyRef}
