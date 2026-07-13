@@ -23,7 +23,7 @@ export default function Pilot() {
       `Имя: ${fd.get("name")}\nКомпания: ${fd.get("company")}\nE-mail: ${fd.get("email")}\n\n${fd.get("msg")}`
     );
     window.location.href = `mailto:${CONTACT}?subject=${encodeURIComponent(
-      "Заявка на пилот Techcatalyst Guard"
+      "Заявка на пилот TechCatalyst Guard"
     )}&body=${body}`;
   };
 
@@ -31,17 +31,13 @@ export default function Pilot() {
     "w-full rounded-xl border border-line bg-soft px-4 py-[13px] text-[15px] text-ink transition-colors focus:border-blue focus:bg-white focus:outline-none";
 
   return (
-    <section
-      id="pilot"
-      className="py-[92px] max-sm:py-16"
-      style={{ background: "linear-gradient(180deg,#f9fafc,#fff)" }}
-    >
+    <section id="pilot" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 gap-14 max-md:grid-cols-1">
         <Reveal>
           <Kicker>Пилотная программа</Kicker>
           <H2>Проверьте на своих репозиториях и своём контуре</H2>
           <Lead>
-            Techcatalyst Guard проходит стадию enterprise-пилотов. Мы
+            TechCatalyst Guard проходит стадию enterprise-пилотов. Мы
             разворачиваем решение у вас и вместе измеряем результат. Не верьте
             лендингу — дайте нам репозиторий и неделю.
           </Lead>

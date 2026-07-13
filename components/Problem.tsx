@@ -31,7 +31,7 @@ const pains = [
 
 export default function Problem() {
   return (
-    <section id="problem" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="problem" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Проблема</Kicker>

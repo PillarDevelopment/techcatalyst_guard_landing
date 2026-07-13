@@ -18,13 +18,13 @@ const principles = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-[92px] max-sm:py-16">
+    <section id="team" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Команда</Kicker>
           <H2>Founder-led команда, которая строит AI security вокруг реального developer workflow</H2>
           <Lead>
-            Techcatalyst Guard развивается как инженерный security-продукт: от
+            TechCatalyst Guard развивается как инженерный security-продукт: от
             модели угроз и локального enforcement до пилотов в инфраструктуре
             заказчика.
           </Lead>
@@ -40,7 +40,7 @@ export default function Team() {
                 Иван Борисов
               </h3>
               <p className="mt-4 max-w-[720px] text-[16px] leading-8 text-muted">
-                Основатель Techcatalyst. Ведёт продукт, архитектуру и работу с
+                Основатель TechCatalyst. Ведёт продукт, архитектуру и работу с
                 пилотами на стыке AI-инфраструктуры, developer tooling и
                 security controls для рабочих станций разработчиков.
               </p>

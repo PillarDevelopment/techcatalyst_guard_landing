@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Techcatalyst Guard — защита рабочих станций разработчиков от утечек секретов в AI-инструменты</title>
+<title>TechCatalyst Guard — безопасное рабочее место разработчика</title>
 <meta name="description" content="On-prem решение для перехвата команд и маскирования секретов и PII на рабочих станциях разработчиков. Терминал, MCP, clipboard — под контролем ваших политик. Данные не покидают контур.">
-<meta property="og:title" content="Techcatalyst Guard — секреты не покидают рабочую станцию">
+<meta property="og:title" content="TechCatalyst Guard — секреты не покидают рабочую станцию">
 <meta property="og:description" content="Перехват команд терминала, маскирование секретов и PII в реальном времени, strict mode и on-prem панель управления.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --blue:#1837da;
@@ -28,19 +25,20 @@
     --bg-soft-2:#f5f5f5;
     --border:#edf0f7;
     --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
-    --sans:'Rubik',Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+    --sans:Inter,"Segoe UI",Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
   ::selection{background:var(--blue-soft)}
 
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-  section{padding:92px 0}
-  h1,h2,h3{font-weight:600;letter-spacing:-.015em;line-height:1.18;color:#222}
-  h2{font-size:clamp(27px,3.4vw,40px);margin-bottom:14px}
-  .kicker{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:block}
-  .lead{color:var(--muted);font-size:clamp(16px,1.6vw,19px);max-width:660px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  section{padding:82px 0}
+  h1,h2,h3{font-weight:600;letter-spacing:-.025em;line-height:1.15;color:#222}
+  h2{font-size:clamp(32px,3.4vw,44px);margin-top:16px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block}
+  .lead{color:var(--muted);font-size:clamp(16px,1.6vw,17px);line-height:1.6;max-width:760px;margin-top:16px}
+  @media(min-width:1024px){section{padding:100px 0}}
   a{color:var(--blue);text-decoration:none}
   a:hover{text-decoration:underline}
 
@@ -54,9 +52,8 @@
   .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;color:#222;letter-spacing:-.01em}
   .logo:hover{text-decoration:none}
   .logo .mark{color:var(--blue)}
-  .logo .guard{color:var(--blue)}
-  .nav-links{display:flex;gap:24px;margin-left:auto}
-  .nav-links a{color:var(--muted);font-size:15px;font-weight:500}
+  .nav-links{display:flex;gap:20px;margin-left:auto;align-items:center}
+  .nav-links a{color:var(--muted);font-size:14px;font-weight:500}
   .nav-links a:hover{color:var(--blue);text-decoration:none}
   .btn{display:inline-block;padding:13px 28px;border-radius:999px;font-size:15.5px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:all .18s ease;white-space:nowrap;font-family:var(--sans)}
   .btn-primary{background:var(--blue);color:#fff}
@@ -66,10 +63,10 @@
   .btn-sm{padding:10px 22px;font-size:14.5px}
   @media(max-width:860px){.nav-links{display:none}}
   @media(max-width:560px){
-    .wrap{padding:0 18px}
-    .nav{gap:12px;height:58px}
-    .logo{font-size:15px}
-    .btn-sm{padding:8px 14px;font-size:13px}
+    .wrap{padding:0 20px}
+    .nav{gap:12px;min-height:60px;height:auto}
+    .logo{font-size:18px}
+    .btn-sm{padding:10px 20px;font-size:14px}
     section{padding:64px 0}
     .hero{padding:48px 0 44px}
     form{padding:26px 20px;border-radius:20px}
@@ -77,17 +74,18 @@
   }
 
   /* ---------- hero ---------- */
-  .hero{padding:96px 0 84px;position:relative;overflow:hidden;background:
-    radial-gradient(900px 460px at 82% -12%,rgba(24,55,218,.07),transparent 60%),var(--bg)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;position:relative}
-  .hero h1{font-size:clamp(32px,4.3vw,52px);margin-bottom:20px;font-weight:700}
+  .hero{padding:78px 0;position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:
+    radial-gradient(900px 520px at 83% -12%,rgba(24,55,218,.12),transparent 62%),var(--bg)}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center;position:relative}
+  .hero h1{font-size:clamp(38px,5.1vw,62px);line-height:1.06;letter-spacing:-.035em;margin-top:20px;font-weight:700}
   .hero h1 em{font-style:normal;color:var(--blue)}
-  .hero .lead{margin-bottom:32px}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-  .trustline{display:flex;gap:10px;flex-wrap:wrap}
-  .trustline span{font-size:13.5px;font-weight:500;color:var(--muted);background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:6px 14px}
+  .hero .lead{margin-bottom:0}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .trustline{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .trustline span{font-size:13px;font-weight:500;color:var(--muted);background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 14px}
   .trustline span::before{content:"●";color:var(--green);font-size:9px;vertical-align:1px;margin-right:7px}
-  @media(max-width:960px){.hero-grid{grid-template-columns:1fr}.hero{padding:64px 0 56px}}
+  @media(min-width:1024px){.hero{padding:104px 0}}
+  @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
 
   /* ---------- terminal (белый стиль) ---------- */
   .term{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 60px rgba(30,40,90,.10);overflow:hidden;font-family:var(--mono);font-size:13.5px;line-height:1.75}
@@ -197,23 +195,30 @@
   details code{font-family:var(--mono);font-size:13.5px;color:var(--blue);background:var(--bg-soft);padding:1px 6px;border-radius:5px}
 
   /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--border);padding:38px 0;font-size:14.5px;color:var(--dim);background:var(--bg-soft)}
-  .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  footer{border-top:1px solid var(--border);padding:48px 0;font-size:14px;color:var(--dim);background:var(--bg-soft)}
+  .foot{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+  .foot-brand{font-size:15px;font-weight:600;color:#222}
+  .foot-note{max-width:520px;margin-top:12px;color:var(--muted)}
+  .foot-legal{margin-top:12px}
+  .foot-links{display:grid;gap:8px;justify-content:end}
+  .foot-links a{color:var(--muted)}
+  @media(max-width:760px){.foot{grid-template-columns:1fr}.foot-links{justify-content:start}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#"><span class="mark">▲</span><span>Techcatalyst&nbsp;<span class="guard">Guard</span></span></a>
+    <a class="logo" href="https://techcatalyst.ru"><span class="mark">▲</span><span>TechCatalyst</span></a>
     <nav class="nav-links">
-      <a href="#problem">Проблема</a>
-      <a href="#how">Как работает</a>
-      <a href="#features">Возможности</a>
-      <a href="#deploy">Развёртывание</a>
-      <a href="#faq">FAQ</a>
+      <a href="https://techcatalyst.ru/#products">Продукты</a>
+      <a href="https://techcatalyst.ru/zakupka-zarubezhnogo-po">Зарубежное ПО</a>
+      <a href="https://techcatalyst.ru/postavka-i-integraciya-ai">AI и интеграция</a>
+      <a href="https://techcatalyst.ru/techcatalyst-vpn">TechCatalyst VPN</a>
+      <a href="#" style="color:var(--blue);font-weight:600">Guard</a>
+      <a href="https://docs.techcatalyst.ru">Документация</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="#pilot" style="margin-left:auto">Запросить пилот</a>
+    <a class="btn btn-primary btn-sm" href="#pilot" style="margin-left:auto">Обсудить задачу</a>
   </div>
 </header>
 
@@ -223,7 +228,7 @@
     <div>
       <span class="kicker">On-prem workstation security</span>
       <h1>Секреты и PII не должны покидать <em>рабочую станцию</em> разработчика</h1>
-      <p class="lead">Techcatalyst Guard перехватывает команды терминала, ответы MCP-инструментов и буфер обмена — и маскирует чувствительные данные до того, как их увидит AI-агент. Политики управляются централизованно, всё работает внутри вашего контура.</p>
+      <p class="lead">TechCatalyst Guard перехватывает команды терминала, ответы MCP-инструментов и буфер обмена — и маскирует чувствительные данные до того, как их увидит AI-агент. Политики управляются централизованно, всё работает внутри вашего контура.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#pilot">Запросить пилот</a>
         <a class="btn btn-ghost" href="#pilot">Архитектура решения</a>
@@ -442,7 +447,7 @@ $ guard status<br>
     <div class="rv">
       <span class="kicker">Пилотная программа</span>
       <h2>Проверьте на своих репозиториях и своём контуре</h2>
-      <p class="lead">Techcatalyst Guard проходит стадию enterprise-пилотов. Мы разворачиваем решение у вас и вместе измеряем результат.</p>
+      <p class="lead">TechCatalyst Guard проходит стадию enterprise-пилотов. Мы разворачиваем решение у вас и вместе измеряем результат.</p>
       <ul>
         <li>Развёртывание серверной части в контуре заказчика</li>
         <li>Подключение пилотной группы рабочих станций</li>
@@ -504,7 +509,7 @@ $ guard status<br>
       </details>
       <details>
         <summary>Чем это отличается от DLP или секрет-сканера?</summary>
-        <p>Классический DLP смотрит на сеть и периметр, сканеры — на код в репозитории. Techcatalyst Guard контролирует саму точку исполнения: команды и их вывод на рабочей станции, где данные впервые попадают в AI-инструменты. Сканер репозиториев при этом входит в продукт как вспомогательный контур.</p>
+        <p>Классический DLP смотрит на сеть и периметр, сканеры — на код в репозитории. TechCatalyst Guard контролирует саму точку исполнения: команды и их вывод на рабочей станции, где данные впервые попадают в AI-инструменты. Сканер репозиториев при этом входит в продукт как вспомогательный контур.</p>
       </details>
     </div>
   </div>
@@ -512,8 +517,18 @@ $ guard status<br>
 
 <footer>
   <div class="wrap foot">
-    <span>© 2026 Techcatalyst · Guard</span>
-    <span><a href="mailto:info@2rm.ru">info@2rm.ru</a> · <a href="https://techcatalyst.ru" target="_blank" rel="noopener">techcatalyst.ru</a></span>
+    <div>
+      <div class="foot-brand">TechCatalyst</div>
+      <p class="foot-note">TechCatalyst Guard — безопасное рабочее место разработчика для работы с AI-агентами.</p>
+      <p class="foot-legal">ИП Борисов Иван Анатольевич · ИНН 575307745402 · ОГРНИП 320574900010615</p>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:info@2rm.ru">info@2rm.ru</a>
+      <a href="https://t.me/pillardev">Telegram</a>
+      <a href="https://techcatalyst.ru/privacy">Политика конфиденциальности</a>
+      <a href="https://techcatalyst.ru/cookie">Политика cookie</a>
+      <span>© 2026 ТехКаталист</span>
+    </div>
   </div>
 </footer>
 
@@ -581,7 +596,7 @@ document.getElementById('pilotForm').addEventListener('submit',e=>{
   const body=encodeURIComponent(
     'Имя: '+v('f-name')+'\nКомпания: '+v('f-company')+'\nE-mail: '+v('f-email')+'\n\n'+v('f-msg')
   );
-  location.href='mailto:info@2rm.ru?subject='+encodeURIComponent('Заявка на пилот Techcatalyst Guard')+'&body='+body;
+  location.href='mailto:info@2rm.ru?subject='+encodeURIComponent('Заявка на пилот TechCatalyst Guard')+'&body='+body;
 });
 </script>
 </body>

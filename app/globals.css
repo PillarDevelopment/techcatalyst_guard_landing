@@ -2,16 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue: #1837da;
+  --blue-bright: #0046f9;
+  --blue-soft: #e2e2fd;
+  --text: #313131;
+  --muted: #63666a;
+  --border: #edf0f7;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-white text-ink antialiased;
+  background: #ffffff;
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #e2e2fd;
+  background: var(--blue-soft);
+}
+
+a,
+button,
+input,
+textarea,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(148, 185, 255, 0.4);
 }
 
 /* reveal on scroll */

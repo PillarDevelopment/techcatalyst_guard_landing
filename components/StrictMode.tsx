@@ -22,7 +22,7 @@ const points = [
 
 export default function StrictMode() {
   return (
-    <section id="strict" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="strict" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 items-center gap-14 max-md:grid-cols-1">
         <Reveal>
           <Kicker>Trust model</Kicker>

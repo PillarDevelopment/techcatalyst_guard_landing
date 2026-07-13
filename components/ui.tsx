@@ -8,7 +8,7 @@ export function Wrap({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto max-w-[1140px] px-6 max-sm:px-[18px] ${className}`}>
+    <div className={`mx-auto w-full max-w-[1180px] px-5 sm:px-7 lg:px-8 ${className}`}>
       {children}
     </div>
   );
@@ -16,7 +16,7 @@ export function Wrap({
 
 export function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <span className="mb-3.5 block text-[13px] font-semibold uppercase tracking-[.12em] text-blue">
+    <span className="block text-[12px] font-semibold uppercase tracking-[.1em] text-blue">
       {children}
     </span>
   );
@@ -24,7 +24,7 @@ export function Kicker({ children }: { children: React.ReactNode }) {
 
 export function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-3.5 text-[clamp(27px,3.4vw,40px)] font-semibold leading-[1.18] tracking-[-.015em] text-[#222]">
+    <h2 className="mt-4 text-[32px] font-semibold leading-[1.15] tracking-[-.025em] text-[#222] md:text-[44px]">
       {children}
     </h2>
   );
@@ -32,7 +32,7 @@ export function H2({ children }: { children: React.ReactNode }) {
 
 export function Lead({ children }: { children: React.ReactNode }) {
   return (
-    <p className="max-w-[660px] text-[clamp(16px,1.6vw,19px)] text-muted">{children}</p>
+    <p className="mt-4 max-w-[760px] text-[16px] leading-[1.6] text-muted md:text-[17px]">{children}</p>
   );
 }
 
@@ -50,8 +50,8 @@ export function BtnPrimary({
   return (
     <Link
       href={href}
-      className={`inline-block whitespace-nowrap rounded-full bg-blue font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta ${
-        small ? "px-[22px] py-2.5 text-[14.5px] max-sm:px-3.5 max-sm:py-2 max-sm:text-[13px]" : "px-7 py-[13px] text-[15.5px]"
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-full border border-blue bg-blue font-semibold text-white transition hover:-translate-y-px hover:bg-blue-bright ${
+        small ? "px-5 py-2.5 text-[14px]" : "px-7 py-3 text-[15px]"
       } ${className}`}
     >
       {children}
@@ -69,7 +69,7 @@ export function BtnGhost({
   return (
     <Link
       href={href}
-      className="inline-block whitespace-nowrap rounded-full border border-[#d6dcec] bg-white px-7 py-[13px] text-[15.5px] font-semibold text-ink transition-all duration-200 hover:border-blue hover:text-blue"
+      className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-[#d6dcec] bg-white px-7 py-3 text-[15px] font-semibold text-ink transition hover:border-blue hover:text-blue"
     >
       {children}
     </Link>
@@ -85,7 +85,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-card border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-card ${className}`}
+      className={`rounded-[20px] border border-line bg-white p-6 sm:p-7 ${className}`}
     >
       {children}
     </div>

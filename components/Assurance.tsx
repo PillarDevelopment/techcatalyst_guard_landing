@@ -32,7 +32,7 @@ const pillars = [
 
 export default function Assurance() {
   return (
-    <section id="assurance" className="py-[92px] max-sm:py-16">
+    <section id="assurance" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Доверие и проверяемость</Kicker>

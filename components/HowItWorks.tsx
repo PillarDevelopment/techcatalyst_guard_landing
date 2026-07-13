@@ -32,7 +32,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-[92px] max-sm:py-16">
+    <section id="how" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Как работает</Kicker>

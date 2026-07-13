@@ -30,7 +30,7 @@ const roles = [
 
 export default function Roles() {
   return (
-    <section id="roles" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="roles" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Для кого</Kicker>

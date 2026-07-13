@@ -32,7 +32,7 @@ const ndaClients = [
 
 export default function Clients() {
   return (
-    <section id="clients" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="clients" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Клиенты и опыт</Kicker>

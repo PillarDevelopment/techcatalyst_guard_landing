@@ -66,7 +66,7 @@ const threats = [
 
 export default function LLMFirewall() {
   return (
-    <section id="llm-firewall" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="llm-firewall" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>LLM-Firewall</Kicker>

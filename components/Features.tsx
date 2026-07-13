@@ -36,7 +36,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-soft py-[92px] max-sm:py-16">
+    <section id="features" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Возможности</Kicker>

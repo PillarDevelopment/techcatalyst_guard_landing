@@ -34,7 +34,7 @@ const stack = [
 
 export default function Deploy() {
   return (
-    <section id="deploy" className="py-[92px] max-sm:py-16">
+    <section id="deploy" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
           <Kicker>Развёртывание</Kicker>

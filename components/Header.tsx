@@ -1,42 +1,46 @@
-import Link from "next/link";
-import { Wrap, BtnPrimary } from "./ui";
+const marketingUrl = process.env.NEXT_PUBLIC_MARKETING_URL || "https://techcatalyst.ru";
 
-const links = [
-  { href: "#problem", label: "Проблема" },
-  { href: "#how", label: "Как работает" },
-  { href: "#features", label: "Возможности" },
-  { href: "#deploy", label: "Развёртывание" },
-  { href: "#faq", label: "FAQ" },
+const products = [
+  { href: `${marketingUrl}/zakupka-zarubezhnogo-po`, label: "Зарубежное ПО" },
+  { href: `${marketingUrl}/postavka-i-integraciya-ai`, label: "AI и интеграция" },
+  { href: `${marketingUrl}/techcatalyst-vpn`, label: "TechCatalyst VPN" },
 ];
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur-md">
-      <Wrap className="flex h-[68px] items-center gap-7 max-sm:h-[58px] max-sm:gap-3">
-        <Link
-          href="#"
-          className="flex items-center gap-2 text-lg font-bold tracking-[-.01em] text-[#222] max-sm:text-[15px]"
-        >
+      <div className="mx-auto flex min-h-[68px] max-w-[1180px] items-center gap-7 px-5 sm:px-7 lg:px-8 max-sm:min-h-[60px]">
+        <a href={marketingUrl} className="flex shrink-0 items-center gap-2 text-[18px] font-bold tracking-[-0.01em] text-[#222]">
           <span className="text-blue">▲</span>
-          <span>
-            Techcatalyst&nbsp;<span className="text-blue">Guard</span>
-          </span>
-        </Link>
-        <nav className="ml-auto flex gap-6 max-md:hidden">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-[15px] font-medium text-muted transition-colors hover:text-blue"
+          <span>TechCatalyst</span>
+        </a>
+
+        <nav className="ml-auto hidden items-center gap-5 lg:flex">
+          <a href={`${marketingUrl}/#products`} className="text-[14px] font-medium text-muted transition-colors hover:text-blue">
+            Продукты
+          </a>
+          {products.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-[14px] font-medium text-muted transition-colors hover:text-blue"
             >
-              {l.label}
-            </Link>
+              {item.label}
+            </a>
           ))}
+          <a href="#top" className="text-[14px] font-semibold text-blue">Guard</a>
+          <a href="https://docs.techcatalyst.ru" className="text-[14px] font-medium text-muted transition-colors hover:text-blue">
+            Документация
+          </a>
         </nav>
-        <BtnPrimary href="#pilot" small className="ml-auto md:ml-0">
-          Запросить пилот
-        </BtnPrimary>
-      </Wrap>
+
+        <a
+          href="#pilot"
+          className="ml-auto inline-flex shrink-0 items-center justify-center rounded-full border border-blue bg-blue px-5 py-2.5 text-[14px] font-semibold text-white transition hover:-translate-y-px hover:bg-blue-bright lg:ml-0"
+        >
+          Обсудить задачу
+        </a>
+      </div>
     </header>
   );
 }
